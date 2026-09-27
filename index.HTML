@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Granimania - El granizado perfecto para todos los gustos">
+    <meta name="author" content="Andres Tejada">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="imagenes/logostras.png">
+    <link rel="stylesheet" href="STYLE.CSS">
+    <title>GRANIMANIA | El sabor que te refresca el día</title>
+</head>
+
+<body>
+
+    <!-- 1. BARRA SUPERIOR DE ANUNCIO -->
+    <div class="top-banner">
+        <span>⚡ ¡Sedes abiertas hoy hasta las 10:00 PM! Visítanos y prueba la máxima frescura 🥤</span>
+    </div>
+
+    <!-- 2. NAVEGACIÓN PRINCIPAL -->
+    <nav>
+        <ul class="menu">
+            <li class="menu-logo">
+                <a href="#">
+                    <img src="imagenes/logostras.png" alt="Logo Granimania">
+                </a>
+            </li>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#sabores">MENÚ DE SABORES</a></li>
+            <li><a href="#destacados">DESTACADOS</a></li>
+            <li><a href="#ventajas">¿POR QUÉ NOSOTROS?</a></li>
+            <li><a href="#faq">PREGUNTAS</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+            <li><a href="#contacto" class="btn-solicitar">SOLICITAR INFORMACIÓN</a></li>
+            <!-- BOTÓN QUE ABRE EL CARRITO -->
+            <li class="menu-cart-btn">
+                <button id="btn-toggle-cart" class="cart-trigger">
+                    🛒 <span id="cart-count">0</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 3. HERO SECTION -->
+    <section class="hero-section">
+        <span class="glow-orb orb-pink" aria-hidden="true"></span>
+        <span class="glow-orb orb-cyan" aria-hidden="true"></span>
+        <span class="glow-orb orb-lime" aria-hidden="true"></span>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>EL GRANIZADO PERFECTO PARA TODOS LOS GUSTOS</h1>
+                <p>Experimente la variedad de nuestros deliciosos y refrescantes sabores de granizados. Fruta 100% natural, opciones veganas y el toque helado perfecto.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#sabores" class="btn-highlight">VER MENÚ COMPLETO</a>
+                    <a href="#contacto" class="btn-secondary">CONTÁCTANOS AQUÍ &rarr;</a>
+                </div>
+
+                <div class="hero-badges">
+                    <span class="badge">🧊 Hielo Troceado Fino</span>
+                    <span class="badge">🇩🇪 Calidad Certificada</span>
+                    <span class="badge">🍋 Fruta 100% Natural</span>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="imagenes/images.jpg" alt="Granizados Especiales Granimania">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- 4. MENÚ INTERACTIVO (CON FOTOS EN CADA TARJETA) -->
+        <section id="sabores" class="menu-interactivo">
+            <h2 class="title-section">CALIDAD QUE SE PUEDE SABOREAR</h2>
+            <p class="subtitle-section">Descubre nuestra amplia variedad de sabores</p>
+
+            <input type="radio" id="tab-todos" name="tabs-granizados" checked>
+            <input type="radio" id="tab-frutales" name="tabs-granizados">
+            <input type="radio" id="tab-licor" name="tabs-granizados">
+
+            <div class="tabs-buttons">
+                <label for="tab-todos" class="tab-btn">Todas las Variedades</label>
+                <label for="tab-frutales" class="tab-btn">Sin Colorantes Artificiales</label>
+                <label for="tab-licor" class="tab-btn">Especiales & Michelados</label>
+            </div>
+
+            <div class="tabs-content">
+                <article class="item-card frutal border-green">
+                    <div class="card-img-wrapper">
+                        <img src="imagenes/images-removebg-preview.png" alt="Maracuyá y Lulo" class="card-img">
+                    </div>
+                    <div class="card-header-tags">
+                        <span class="card-tag tag-green">TAPA VERDE</span>
+                        <span class="mini-badge">🌱 Vegano</span>
+                    </div>
+                    <h1>Maracuyá & Lulo</h1>
+                    <h2>Sin colorantes artificiales</h2>
+                    <p class="card-price">$ 8.000</p>
+                    <p>Disfruta de la combinación entre la acidez del maracuyá y el sabor refrescante del lulo natural.</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Maracuyá & Lulo', 8000)">🛒 Agregar al Carrito</button>
+                </article>
+
+                <article class="item-card licor border-red">
+                    <div class="card-img-wrapper">
+                        <img src="imagenes/Cervezado_Michelado-removebg-preview.png" alt="Cervezado Michelado" class="card-img">
+                    </div>
+                    <div class="card-header-tags">
+                        <span class="card-tag tag-red">TAPA ROJA</span>
+                        <span class="mini-badge">🌶️ Picante / Con Licor</span>
+                    </div>
+                    <h1>Cervezado Michelado</h1>
+                    <h2>El toque helado para tus tardes</h2>
+                    <p class="card-price">$ 12.000</p>
+                    <p>Mezcla michelada con sal, limón, tajín y tu cerveza preferida. ¡La máxima frescura!</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Cervezado Michelado', 12000)">🛒 Agregar al Carrito</button>
+                </article>
+
+                <article class="item-card frutal border-blue">
+                    <div class="card-img-wrapper">
+                        <img src="imagenes/frambruesa.2.png" alt="Frambuesa Azul" class="card-img">
+                    </div>
+                    <div class="card-header-tags">
+                        <span class="card-tag tag-blue">TAPA AZUL</span>
+                        <span class="mini-badge">🧊 100% Refrescante</span>
+                    </div>
+                    <h1>Frambuesa Azul Especial</h1>
+                    <h2>Sabor refrescante e intenso</h2>
+                    <p class="card-price">$ 9.500</p>
+                    <p>Combinación helada estilo MonsterSlush con sabor original de frambuesa azul silvestre.</p>
+                    <button class="btn-add-cart" onclick="agregarAlCarrito('Frambuesa Azul Especial', 9500)">🛒 Agregar al Carrito</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- 5. CARRUSEL HORIZONTAL -->
+        <section id="destacados" class="carrusel-section">
+            <h2 class="title-section">GALERÍA DE DESTACADOS</h2>
+            <div class="carrusel-container">
+                <div class="carrusel-card">
+                    <img src="imagenes/images-removebg-preview.png" alt="Especial Maracuyá">
+                    <h4>Especial Maracuyá</h4>
+                    <span class="carrusel-price">$8.000</span>
+                    <button class="btn-add-cart btn-sm" onclick="agregarAlCarrito('Especial Maracuyá', 8000)">+ Agregar</button>
+                </div>
+                <div class="carrusel-card">
+                    <img src="imagenes/Cervezado_Michelado-removebg-preview.png" alt="Cervezado Michelado">
+                    <h4>Cervezado Michelado</h4>
+                    <span class="carrusel-price">$12.000</span>
+                    <button class="btn-add-cart btn-sm" onclick="agregarAlCarrito('Cervezado Michelado', 12000)">+ Agregar</button>
+                </div>
+                <div class="carrusel-card">
+                    <img src="imagenes/Captura_de_pantalla_2026-09-09_010949-removebg-preview.png" alt="Lulo Helado">
+                    <h4>Luloloso Mor</h4>
+                    <span class="carrusel-price">$8.500</span>
+                    <button class="btn-add-cart btn-sm" onclick="agregarAlCarrito('Luloloso Mor', 8500)">+ Agregar</button>
+                </div>
+                <div class="carrusel-card">
+                    <img src="imagenes/grani.png    " alt="Mora & Chamoy">
+                    <h4>Mora con Chamoy</h4>
+                    <span class="carrusel-price">$9.000</span>
+                    <button class="btn-add-cart btn-sm" onclick="agregarAlCarrito('Mora con Chamoy', 9000)">+ Agregar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SECCIÓN DE VENTAJAS (CON FOTOS ILUSTRATIVAS) -->
+        <section id="ventajas" class="features-section">
+            <h2 class="title-section">¿POR QUÉ ELEGIR GRANIMANIA?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-img-box">
+                        <img src="imagenes/licensed-image.jpg" alt="Fruta Real">
+                    </div>
+                    <h3>Fruta Real</h3>
+                    <p>Elaborados con pulpa de fruta 100% seleccionada para un sabor genuino.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img-box">
+                        <img src="imagenes/licensed-image (1).jpg" alt="Textura Cristal">
+                    </div>
+                    <h3>Textura Cristal</h3>
+                    <p>Punto de congelación exacto para un granizado suave y fácil de tomar.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img-box">
+                        <img src="imagenes/imagen 2.jpg" alt="Eventos y Fiestas">
+                    </div>
+                    <h3>Eventos & Fiestas</h3>
+                    <p>Estaciones móviles de granizados para tus eventos corporativos y bodas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. PREGUNTAS FRECUENTES -->
+        <section id="faq" class="faq-section">
+            <h2 class="title-section">PREGUNTAS FRECUENTES</h2>
+            <div class="faq-container">
+                <details class="faq-item">
+                    <summary>¿Los granizados contienen colorantes artificiales?</summary>
+                    <p>Nuestra línea frutal utiliza pulpas y concentrados naturales sin colorantes añadidos.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Tienen opciones para eventos o fiestas privadas?</summary>
+                    <p>Sí, ofrecemos el alquiler de máquinas granizadoras y servicio de barra móvil.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Qué métodos de pago aceptan?</summary>
+                    <p>Aceptamos efectivo, tarjetas débito/crédito y pagos por Nequi o Daviplata.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Hacen domicilios?</summary>
+                    <p>Sí, hacemos entregas dentro de la zona comercial. Escríbenos por WhatsApp para confirmar cobertura y tiempo de entrega.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- 8. SECCIÓN DE CONTACTO Y UBICACIÓN (CON FOTO O MAPA) -->
+        <section id="contacto" class="contact-section">
+            <h2 class="title-section">INFORMACIÓN DE CONTACTO Y UBICACIÓN</h2>
+            <p class="subtitle-section">Visítanos en nuestra sede principal o envíanos un mensaje directo</p>
+            
+            <div class="contact-container">
+                <!-- Información de Ubicación y Contacto -->
+                <div class="contact-info-cards">
+                    <!-- Imagen de la sede / mapa -->
+                    <div class="location-map-card">
+                        <img src="imagenes/mapa.png" alt="Sede Granimania" class="map-img">
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4>Ubicación Sede Principal</h4>
+                            <p>Calle Principal #45 - 28, Zona Comercial</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">✉️</div>
+                        <div>
+                            <h4>Correo Electrónico</h4>
+                            <p>contacto@granimania.com</p>
+                            <p>ventas@granimania.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4>Teléfono / WhatsApp</h4>
+                            <p>+57 300 123 4567</p>
+                            <p>(604) 444 5566</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">⏰</div>
+                        <div>
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a Sábado: 11:00 AM - 10:00 PM</p>
+                            <p>Domingos y Festivos: 12:00 PM - 8:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <form id="contact-form" class="contact-form">
+                    <h3>Déjanos un Mensaje</h3>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje o Detalles:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta o cotización..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-highlight btn-full">ENVIAR MENSAJE</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ASIDE CON FOTO ILUSTRATIVA -->
+        <aside class="columna">
+            <blockquote>🧊 ¡El placer helado que refresca tu día!</blockquote>
+            <div class="aside-info-box">
+                <img src="imagenes/aside.png" alt="Eventos Especiales" class="aside-img">
+                <h4>🥤 Servicio para Eventos</h4>
+                <p>Ofrecemos servicio de granizados ilimitados para bodas, cumpleaños y eventos empresariales.</p>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- PANEL DEL CARRITO DE COMPRAS (DRAWER LATERAL) -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>🛒 Tu Carrito</h3>
+            <button id="btn-close-cart" class="cart-close">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-body">
+            <p class="empty-cart-msg">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0</span>
+            </div>
+            <button class="btn-highlight btn-full" onclick="hacerPedidoWhatsApp()">Pedir por WhatsApp 💬</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- NOTIFICACIÓN TIPO TOAST -->
+    <div id="toast" class="toast">¡Producto agregado al carrito! 🥤</div>
+
+    <!-- BOTÓN WHATSAPP -->
+    <a href="https://wa.me/573001234567?text=Hola,%20quiero%20hacer%20una%20consulta" class="btn-whatsapp-flotante" target="_blank">
+       💬 ¡Habla con nosotros!
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="pie">
+        <p>&copy; 2017-2026 GRANIMANIA™ - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- SCRIPT DEL CARRITO -->
+    <script>
+        let carrito = JSON.parse(localStorage.getItem('granimania-carrito') || '[]');
+
+        function guardarCarrito() {
+            localStorage.setItem('granimania-carrito', JSON.stringify(carrito));
+        }
+
+        const btnToggleCart = document.getElementById('btn-toggle-cart');
+        const btnCloseCart = document.getElementById('btn-close-cart');
+        const cartDrawer = document.getElementById('cart-drawer');
+        const cartOverlay = document.getElementById('cart-overlay');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartTotalPrice = document.getElementById('cart-total-price');
+        const cartCount = document.getElementById('cart-count');
+        const toast = document.getElementById('toast');
+
+        btnToggleCart.addEventListener('click', toggleCart);
+        btnCloseCart.addEventListener('click', toggleCart);
+        cartOverlay.addEventListener('click', toggleCart);
+
+        function toggleCart() {
+            cartDrawer.classList.toggle('open');
+            cartOverlay.classList.toggle('open');
+        }
+
+        function agregarAlCarrito(nombre, precio) {
+            const itemExistente = carrito.find(item => item.nombre === nombre);
+            if (itemExistente) {
+                itemExistente.cantidad++;
+            } else {
+                carrito.push({ nombre, precio, cantidad: 1 });
+            }
+            guardarCarrito();
+            actualizarCarrito();
+            mostrarToast();
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            guardarCarrito();
+            actualizarCarrito();
+        }
+
+        function cambiarCantidad(index, cambio) {
+            carrito[index].cantidad += cambio;
+            if (carrito[index].cantidad <= 0) {
+                carrito.splice(index, 1);
+            }
+            guardarCarrito();
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            cartItemsContainer.innerHTML = '';
+            let total = 0;
+            let totalCantidad = 0;
+
+            if (carrito.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="empty-cart-msg">Tu carrito está vacío</p>';
+            } else {
+                carrito.forEach((item, index) => {
+                    total += item.precio * item.cantidad;
+                    totalCantidad += item.cantidad;
+
+                    const cartItem = document.createElement('div');
+                    cartItem.classList.add('cart-item');
+                    cartItem.innerHTML = `
+                        <div>
+                            <strong>${item.nombre}</strong>
+                            <div>$${(item.precio * item.cantidad).toLocaleString('es-CO')}</div>
+                        </div>
+                        <div class="cart-controls">
+                            <button onclick="cambiarCantidad(${index}, -1)">-</button>
+                            <span>${item.cantidad}</span>
+                            <button onclick="cambiarCantidad(${index}, 1)">+</button>
+                            <button class="btn-remove" onclick="eliminarDelCarrito(${index})">&times;</button>
+                        </div>
+                    `;
+                    cartItemsContainer.appendChild(cartItem);
+                });
+            }
+
+            cartTotalPrice.textContent = `$${total.toLocaleString('es-CO')}`;
+            cartCount.textContent = totalCantidad;
+        }
+
+        function mostrarToast() {
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        function hacerPedidoWhatsApp() {
+            if (carrito.length === 0) {
+                alert("Tu carrito está vacío");
+                return;
+            }
+            let mensaje = "¡Hola! Quisiera realizar el siguiente pedido:%0A";
+            let total = 0;
+            carrito.forEach(item => {
+                mensaje += `- ${item.cantidad}x ${item.nombre} ($${(item.precio * item.cantidad).toLocaleString('es-CO')})%0A`;
+                total += item.precio * item.cantidad;
+            });
+            mensaje += `%0ATotal a pagar: $${total.toLocaleString('es-CO')}`;
+            window.open(`https://wa.me/573001234567?text=${mensaje}`, '_blank');
+        }
+
+        // FORMULARIO DE CONTACTO -> ENVÍA EL MENSAJE POR WHATSAPP
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value.trim();
+            const correo = document.getElementById('correo').value.trim();
+            const mensajeTexto = document.getElementById('mensaje').value.trim();
+
+            let texto = `¡Hola! Mi nombre es ${nombre}.\n`;
+            texto += `Correo: ${correo}\n`;
+            if (mensajeTexto) {
+                texto += `Mensaje: ${mensajeTexto}`;
+            }
+
+            window.open(`https://wa.me/573001234567?text=${encodeURIComponent(texto)}`, '_blank');
+            contactForm.reset();
+        });
+
+        // Mostrar el carrito guardado al cargar la página
+        actualizarCarrito();
+    </script>
+</body>
+
+</html>
